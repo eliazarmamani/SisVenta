@@ -1,0 +1,287 @@
+/* =========================================================
+   EDITAR CATEGORÍA
+   ========================================================= */
+
+.categoria-edit-page {
+    padding-bottom: 40px;
+}
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.categoria-edit-page .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 25px;
+    margin-bottom: 18px;
+}
+
+.categoria-edit-page .page-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #212529;
+    letter-spacing: -0.4px;
+}
+
+.categoria-edit-page .page-header h1 i {
+    margin-right: 10px;
+    font-size: 27px;
+}
+
+.categoria-edit-page .page-header p {
+    margin: 7px 0 0;
+    color: #6c757d;
+    font-size: 15px;
+}
+
+/* =========================================================
+   BOTÓN VOLVER
+   ========================================================= */
+
+.categoria-edit-page .btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 17px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #495057;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.categoria-edit-page .btn-back:hover {
+    background: #f8f9fa;
+    color: #212529;
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.categoria-edit-page .breadcrumb {
+    margin-bottom: 22px;
+}
+
+/* =========================================================
+   TARJETA
+   ========================================================= */
+
+.categoria-edit-page .form-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* =========================================================
+   CABECERA DE TARJETA
+   ========================================================= */
+
+.categoria-edit-page .form-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 22px 25px;
+    border-bottom: 1px solid #e9ecef;
+    background: #fafbfc;
+}
+
+.categoria-edit-page .header-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #e9f2ff;
+    color: #0d6efd;
+    font-size: 19px;
+    flex-shrink: 0;
+}
+
+.categoria-edit-page .form-card-header h2 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    color: #212529;
+}
+
+.categoria-edit-page .form-card-header p {
+    margin: 4px 0 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* =========================================================
+   CONTENIDO DEL FORMULARIO
+   ========================================================= */
+
+.categoria-edit-page .form-card > form,
+.categoria-edit-page .form-card form {
+    padding: 28px 25px 0;
+}
+
+.categoria-edit-page .form-field {
+    width: 100%;
+}
+
+.categoria-edit-page .form-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #343a40;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.categoria-edit-page .form-field label span {
+    margin-left: 3px;
+    color: #dc3545;
+}
+
+/* =========================================================
+   INPUTS Y TEXTAREA
+   ========================================================= */
+
+.categoria-edit-page .form-field input,
+.categoria-edit-page .form-field textarea,
+.categoria-edit-page .form-field select {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #212529;
+    background: #ffffff;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.categoria-edit-page .form-field input {
+    min-height: 46px;
+    padding: 10px 13px;
+}
+
+.categoria-edit-page .form-field textarea {
+    min-height: 125px;
+    padding: 12px 13px;
+    resize: vertical;
+}
+
+.categoria-edit-page .form-field input:focus,
+.categoria-edit-page .form-field textarea:focus,
+.categoria-edit-page .form-field select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.12);
+    outline: none;
+}
+
+.categoria-edit-page .form-field small {
+    display: block;
+    margin-top: 7px;
+    color: #6c757d;
+    font-size: 13px;
+}
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.categoria-edit-page .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+    padding: 20px 0;
+    border-top: 1px solid #e9ecef;
+}
+
+.categoria-edit-page .form-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 43px;
+    padding: 9px 17px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.categoria-edit-page .btn-reset {
+    border: 1px solid #ced4da;
+    background: #ffffff;
+    color: #495057;
+}
+
+.categoria-edit-page .btn-reset:hover {
+    background: #f8f9fa;
+    border-color: #adb5bd;
+}
+
+.categoria-edit-page .btn-update {
+    border: 1px solid #0d6efd;
+    background: #0d6efd;
+    color: #ffffff;
+}
+
+.categoria-edit-page .btn-update:hover {
+    background: #0b5ed7;
+    border-color: #0a58ca;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(13, 110, 253, 0.2);
+}
+
+.categoria-edit-page .form-actions button:active {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .categoria-edit-page .page-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .categoria-edit-page .page-header h1 {
+        font-size: 25px;
+    }
+
+    .categoria-edit-page .btn-back {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .categoria-edit-page .form-card-header {
+        padding: 18px;
+    }
+
+    .categoria-edit-page .form-card > form,
+    .categoria-edit-page .form-card form {
+        padding: 22px 18px 0;
+    }
+
+    .categoria-edit-page .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .categoria-edit-page .form-actions button {
+        width: 100%;
+    }
+}

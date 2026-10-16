@@ -1,0 +1,853 @@
+/* =========================================================
+   FONDO GENERAL
+========================================================= */
+
+.role-create-page {
+    min-height: calc(100vh - 70px);
+    padding: 25px 0 45px;
+    background: #e9eef3;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+========================================================= */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 18px;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.page-title-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #0d6efd, #084298);
+    color: #fff;
+    font-size: 23px;
+    box-shadow: 0 8px 20px rgba(13, 110, 253, .20);
+}
+
+.page-title-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.page-title h1 {
+    margin: 0;
+    color: #172033;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: -.4px;
+}
+
+.page-title p {
+    margin: 4px 0 0;
+    color: #667085;
+    font-size: 13px;
+}
+
+.page-title-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 9px;
+    border-radius: 50px;
+    background: #e7f0ff;
+    color: #0d6efd;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   BOTÓN VOLVER
+========================================================= */
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 0 16px;
+    border: 1px solid #d0d5dd;
+    border-radius: 9px;
+    background: #f8fafc;
+    color: #475467;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all .2s ease;
+}
+
+.btn-back:hover {
+    background: #e2e8ef;
+    border-color: #b8c2cc;
+    color: #0d6efd;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
+
+.page-navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+.navigation-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 34px;
+    padding: 0 11px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #475467;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    transition: all .18s ease;
+}
+
+.navigation-button i {
+    color: #0d6efd;
+    font-size: 10px;
+}
+
+.navigation-button:hover {
+    background: #e2e8ef;
+    border-color: #b8c2cc;
+    color: #0d6efd;
+    transform: translateY(-1px);
+}
+
+.navigation-separator {
+    color: #98a2b3;
+    font-size: 12px;
+}
+
+.navigation-current {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0 11px;
+    border-radius: 8px;
+    background: #dfe7ef;
+    color: #475467;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.role-card {
+    overflow: hidden;
+    height: 100%;
+    border: 1px solid #dfe5ec;
+    border-radius: 16px;
+    background: #f8fafc;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, .07);
+}
+
+.card-header-custom {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 19px 22px;
+    border-bottom: 1px solid #e0e6ed;
+    background: #f5f8fb;
+}
+
+.header-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #e7f0ff;
+    color: #0d6efd;
+    font-size: 17px;
+}
+
+.card-header-custom h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.card-header-custom p {
+    margin: 3px 0 0;
+    color: #7b8794;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.card-body-custom {
+    padding: 24px;
+}
+
+
+/* =========================================================
+   CAMPO
+========================================================= */
+
+.form-group-custom {
+    margin-bottom: 20px;
+}
+
+.form-group-custom label {
+    display: block;
+    margin-bottom: 8px;
+    color: #344054;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-group-custom label span {
+    color: #dc3545;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper > i {
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    z-index: 2;
+    color: #98a2b3;
+    font-size: 13px;
+    transform: translateY(-50%);
+}
+
+.form-control-custom {
+    width: 100%;
+    height: 43px;
+    padding: 0 13px 0 38px;
+    border: 1px solid #d0d5dd;
+    border-radius: 9px;
+    outline: none;
+    background: #fff;
+    color: #344054;
+    font-size: 13px;
+    transition: all .18s ease;
+}
+
+.form-control-custom::placeholder {
+    color: #98a2b3;
+}
+
+.form-control-custom:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, .10);
+}
+
+.form-control-custom.is-invalid {
+    border-color: #dc3545;
+}
+
+.form-control-custom.is-invalid:focus {
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, .10);
+}
+
+.input-help {
+    display: block;
+    margin-top: 7px;
+    color: #8a95a3;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin-top: 7px;
+    color: #dc3545;
+    font-size: 11px;
+}
+
+.error-message i {
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   INFORMACIÓN
+========================================================= */
+
+.role-info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 14px;
+    border: 1px solid #dce7f5;
+    border-radius: 11px;
+    background: #edf4fc;
+}
+
+.info-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: #dceaff;
+    color: #0d6efd;
+    font-size: 14px;
+}
+
+.role-info-box strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #344054;
+    font-size: 12px;
+}
+
+.role-info-box p {
+    margin: 0;
+    color: #667085;
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.role-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #eef2f6;
+    color: #667085;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.role-tip i {
+    margin-top: 2px;
+    color: #0d6efd;
+}
+
+
+/* =========================================================
+   CABECERA DE PERMISOS
+========================================================= */
+
+.permissions-header {
+    justify-content: space-between;
+}
+
+.permissions-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+}
+
+.permission-counter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: #e7f0ff;
+    color: #0d6efd;
+    white-space: nowrap;
+}
+
+.permission-counter strong {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.permission-counter small {
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   HERRAMIENTAS
+========================================================= */
+
+.permissions-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px;
+    border-bottom: 1px solid #e0e6ed;
+    background: #f8fafc;
+}
+
+.search-permissions {
+    position: relative;
+    flex: 1;
+}
+
+.search-permissions > i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    color: #98a2b3;
+    font-size: 11px;
+    transform: translateY(-50%);
+}
+
+.search-permissions input {
+    width: 100%;
+    height: 36px;
+    padding: 0 11px 0 34px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: #344054;
+    font-size: 11px;
+    transition: all .18s ease;
+}
+
+.search-permissions input:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, .10);
+}
+
+.permission-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 0 11px;
+    border: 1px solid #cfe0ff;
+    border-radius: 8px;
+    background: #eaf2ff;
+    color: #0d6efd;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .18s ease;
+}
+
+.permission-action:hover {
+    border-color: #0d6efd;
+    background: #0d6efd;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.permission-action.clear {
+    border-color: #d9dde3;
+    background: #eef2f6;
+    color: #667085;
+}
+
+.permission-action.clear:hover {
+    border-color: #98a2b3;
+    background: #e1e6eb;
+    color: #344054;
+}
+
+
+/* =========================================================
+   LISTA DE PERMISOS
+========================================================= */
+
+.permissions-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+    max-height: 410px;
+    padding: 18px;
+    overflow-y: auto;
+    background: #f8fafc;
+}
+
+.permissions-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.permissions-container::-webkit-scrollbar-track {
+    background: #eef2f6;
+}
+
+.permissions-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #c3ccd6;
+}
+
+
+/* =========================================================
+   PERMISO
+========================================================= */
+
+.permission-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 59px;
+    padding: 10px 12px;
+    border: 1px solid #dfe5ec;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    transition: all .18s ease;
+}
+
+.permission-item:hover {
+    border-color: #b9d2f7;
+    background: #f5f9ff;
+    transform: translateY(-1px);
+}
+
+.permission-item.selected {
+    border-color: #86b7fe;
+    background: #edf4ff;
+}
+
+.permission-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.custom-check {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 2px solid #c5ccd5;
+    border-radius: 6px;
+    background: #fff;
+    color: #fff;
+    transition: all .18s ease;
+}
+
+.custom-check i {
+    opacity: 0;
+    font-size: 10px;
+    transform: scale(.6);
+    transition: all .15s ease;
+}
+
+.permission-checkbox:checked + .custom-check {
+    border-color: #0d6efd;
+    background: #0d6efd;
+}
+
+.permission-checkbox:checked + .custom-check i {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.permission-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 2px;
+}
+
+.permission-content strong {
+    overflow: hidden;
+    color: #344054;
+    font-size: 11px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.permission-content small {
+    color: #98a2b3;
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   SIN PERMISOS
+========================================================= */
+
+.empty-permissions {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.empty-permissions-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 13px;
+    border-radius: 14px;
+    background: #e9eef3;
+    color: #7b8794;
+    font-size: 21px;
+}
+
+.empty-permissions h3 {
+    margin: 0 0 6px;
+    color: #172033;
+    font-size: 15px;
+}
+
+.empty-permissions p {
+    max-width: 350px;
+    margin: 0;
+    color: #7b8794;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ERROR DE PERMISOS
+========================================================= */
+
+.permission-error {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0 18px 15px;
+    padding: 9px 11px;
+    border-radius: 8px;
+    background: #fff0f1;
+    color: #dc3545;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   ACCIONES DEL FORMULARIO
+========================================================= */
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 9px;
+    margin-top: 20px;
+    padding: 15px 0 0;
+}
+
+.btn-cancel,
+.btn-save {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 41px;
+    padding: 0 17px;
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .18s ease;
+}
+
+.btn-cancel {
+    border: 1px solid #d0d5dd;
+    background: #f8fafc;
+    color: #667085;
+}
+
+.btn-cancel:hover {
+    border-color: #b8c2cc;
+    background: #e2e8ef;
+    color: #344054;
+    transform: translateY(-1px);
+}
+
+.btn-save {
+    border: 1px solid #0d6efd;
+    background: #0d6efd;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(13, 110, 253, .16);
+}
+
+.btn-save:hover {
+    border-color: #0b5ed7;
+    background: #0b5ed7;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, .23);
+}
+
+.btn-save:disabled {
+    opacity: .75;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .permissions-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .page-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .btn-back {
+        width: 100%;
+    }
+
+    .permissions-toolbar {
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+
+    .search-permissions {
+        flex: 1 1 100%;
+    }
+
+    .permission-action {
+        flex: 1;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .role-create-page {
+        padding: 18px 0 30px;
+    }
+
+    .page-title {
+        gap: 11px;
+    }
+
+    .page-title-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        font-size: 20px;
+    }
+
+    .page-title h1 {
+        font-size: 23px;
+    }
+
+    .page-title p {
+        font-size: 12px;
+    }
+
+    .page-navigation {
+        gap: 5px;
+    }
+
+    .navigation-button,
+    .navigation-current {
+        min-height: 32px;
+        padding: 0 9px;
+    }
+
+    .role-card {
+        border-radius: 12px;
+    }
+
+    .card-header-custom {
+        padding: 16px;
+    }
+
+    .card-body-custom {
+        padding: 17px;
+    }
+
+    .permissions-title {
+        align-items: flex-start;
+    }
+
+    .permissions-toolbar {
+        padding: 12px;
+    }
+
+    .permissions-container {
+        padding: 12px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .btn-cancel,
+    .btn-save {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   REDUCCIÓN DE MOVIMIENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .btn-back,
+    .navigation-button,
+    .permission-action,
+    .permission-item,
+    .btn-cancel,
+    .btn-save {
+        transition: none;
+    }
+}

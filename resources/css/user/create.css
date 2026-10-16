@@ -1,0 +1,372 @@
+/* =========================================================
+   CREAR USUARIO
+   ========================================================= */
+
+.user-create-page {
+    padding-bottom: 40px;
+    color: #1f2937;
+}
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.page-header {
+    margin-top: 25px;
+    margin-bottom: 18px;
+    padding: 24px 28px;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.page-header p {
+    margin: 6px 0 0;
+    font-size: 1.05rem;
+    color: #6b7280;
+}
+
+.page-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef4ff;
+    color: #2563eb;
+    font-size: 1.5rem;
+}
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.user-breadcrumb {
+    margin-bottom: 22px;
+    padding: 0;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.user-breadcrumb a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.user-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.user-breadcrumb i {
+    margin-right: 5px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.user-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.user-card-header {
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f8fafc;
+}
+
+.header-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 12px;
+    background: #2563eb;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.user-card-header h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.user-card-header p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+.user-card-body {
+    padding: 32px 35px 20px;
+}
+
+/* =========================================================
+   CAMPOS
+   ========================================================= */
+
+.form-group-custom {
+    margin-bottom: 27px;
+}
+
+.form-group-custom label {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 1.08rem;
+    font-weight: 650;
+    color: #1f2937;
+}
+
+.form-group-custom label i {
+    width: 22px;
+    margin-right: 5px;
+    color: #2563eb;
+}
+
+.form-group-custom label span {
+    color: #dc2626;
+    margin-left: 3px;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.form-control-custom {
+    width: 100%;
+    min-height: 52px;
+    padding: 11px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 1.05rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-control-custom::placeholder {
+    color: #9ca3af;
+}
+
+.form-control-custom:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+select.form-control-custom {
+    cursor: pointer;
+}
+
+/* =========================================================
+   AYUDA
+   ========================================================= */
+
+.field-help {
+    display: block;
+    margin-top: 7px;
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+.field-error {
+    display: block;
+    margin-top: 7px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #dc2626;
+}
+
+.field-error i {
+    margin-right: 4px;
+}
+
+.form-control-custom.is-invalid {
+    border-color: #dc2626;
+}
+
+.form-control-custom.is-invalid:focus {
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+/* =========================================================
+   CONTRASEÑA
+   ========================================================= */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper .form-control-custom {
+    padding-right: 52px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    color: #64748b;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.password-toggle:hover {
+    background: #f1f5f9;
+    color: #2563eb;
+}
+
+/* =========================================================
+   SEGURIDAD CONTRASEÑA
+   ========================================================= */
+
+.password-strength {
+    margin-top: 9px;
+}
+
+.strength-bar {
+    width: 100%;
+    height: 5px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.strength-bar span {
+    display: block;
+    width: 0;
+    height: 100%;
+    transition: width 0.25s ease;
+}
+
+#strengthText {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.user-card-footer {
+    padding: 20px 30px;
+    border-top: 1px solid #e5e7eb;
+    background: #f8fafc;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.btn-primary-custom,
+.btn-secondary-custom {
+    min-height: 48px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary-custom {
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.btn-primary-custom:hover {
+    background: #1d4ed8;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-secondary-custom {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #374151;
+}
+
+.btn-secondary-custom:hover {
+    background: #f1f5f9;
+    color: #111827;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .page-header {
+        padding: 20px;
+    }
+
+    .page-header h1 {
+        font-size: 1.65rem;
+    }
+
+    .page-header p {
+        font-size: 0.95rem;
+    }
+
+    .user-card-body {
+        padding: 25px 20px 10px;
+    }
+
+    .user-card-footer {
+        padding: 18px 20px;
+        flex-direction: column-reverse;
+    }
+
+    .btn-primary-custom,
+    .btn-secondary-custom {
+        width: 100%;
+    }
+}

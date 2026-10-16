@@ -1,0 +1,380 @@
+/* =========================================================
+   CREAR EMPLEADO
+   ========================================================= */
+
+.empleado-create-page {
+    min-height: calc(100vh - 70px);
+    padding-bottom: 40px;
+}
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.page-header {
+    margin-top: 25px;
+    margin-bottom: 18px;
+}
+
+.page-header-content {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.page-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0d6efd;
+    color: #fff;
+
+    font-size: 23px;
+
+    box-shadow: 0 6px 18px rgba(13, 110, 253, 0.20);
+}
+
+.page-header h1 {
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: #212529;
+}
+
+.page-header p {
+    margin: 5px 0 0;
+
+    color: #6c757d;
+    font-size: 15px;
+}
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.breadcrumb-container {
+    margin-bottom: 22px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.employee-card {
+    background: #fff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.04),
+        0 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.employee-card-header {
+    padding: 23px 28px;
+
+    background: linear-gradient(
+        135deg,
+        #f8fafc,
+        #ffffff
+    );
+
+    border-bottom: 1px solid #e9ecef;
+}
+
+.employee-card-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 0;
+
+    color: #212529;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.employee-card-header h2 i {
+    color: #0d6efd;
+}
+
+.employee-card-header span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #6c757d;
+
+    font-size: 14px;
+}
+
+/* =========================================================
+   CARD BODY
+   ========================================================= */
+
+.employee-card-body {
+    padding: 30px;
+}
+
+/* =========================================================
+   CAMPOS
+   ========================================================= */
+
+.field-wrapper {
+    width: 100%;
+}
+
+.custom-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 9px;
+
+    color: #343a40;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.custom-label i {
+    color: #0d6efd;
+    width: 17px;
+}
+
+.custom-label span {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.field-wrapper input,
+.field-wrapper select,
+.field-wrapper textarea {
+    min-height: 48px;
+
+    border: 1px solid #ced4da;
+    border-radius: 9px;
+
+    padding: 10px 14px;
+
+    font-size: 15px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background-color .2s ease;
+}
+
+.field-wrapper input:focus,
+.field-wrapper select:focus,
+.field-wrapper textarea:focus {
+    border-color: #0d6efd;
+
+    box-shadow:
+        0 0 0 3px rgba(13, 110, 253, 0.10);
+
+    outline: none;
+}
+
+.field-wrapper input::placeholder {
+    color: #adb5bd;
+}
+
+/* =========================================================
+   AYUDA
+   ========================================================= */
+
+.field-help {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #8a939b;
+
+    font-size: 13px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 30px;
+    padding-top: 22px;
+
+    border-top: 1px solid #e9ecef;
+}
+
+/* =========================================================
+   BOTÓN CANCELAR
+   ========================================================= */
+
+.btn-cancel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 46px;
+
+    padding: 0 20px;
+
+    border: 1px solid #ced4da;
+    border-radius: 9px;
+
+    background: #fff;
+    color: #495057;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: all .2s ease;
+}
+
+.btn-cancel:hover {
+    background: #f8f9fa;
+    color: #212529;
+
+    border-color: #adb5bd;
+
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   BOTÓN GUARDAR
+   ========================================================= */
+
+.btn-save {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 46px;
+
+    padding: 0 24px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #0d6efd;
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 14px rgba(13, 110, 253, 0.20);
+
+    transition: all .2s ease;
+}
+
+.btn-save:hover {
+    background: #0b5ed7;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 7px 18px rgba(13, 110, 253, 0.25);
+}
+
+.btn-save:active {
+    transform: translateY(0);
+}
+
+.btn-save:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .empleado-create-page {
+        padding-bottom: 25px;
+    }
+
+    .page-header h1 {
+        font-size: 25px;
+    }
+
+    .page-header p {
+        font-size: 14px;
+    }
+
+    .page-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .employee-card-body {
+        padding: 20px;
+    }
+
+    .employee-card-header {
+        padding: 20px;
+    }
+
+    .form-footer {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .btn-cancel,
+    .btn-save {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .page-header-content {
+        gap: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 22px;
+    }
+
+    .page-header p {
+        font-size: 13px;
+    }
+
+    .employee-card-body {
+        padding: 16px;
+    }
+}

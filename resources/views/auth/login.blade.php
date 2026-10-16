@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Inicio de sesión del sistema de ventas">
+    <meta name="author" content="Sistema de Ventas">
+
+    <title>Sistema de Ventas | Iniciar sesión</title>
+
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+        crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 45%, #084298 100%);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #layoutAuthentication {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #layoutAuthentication_content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-wrapper {
+            width: 100%;
+            max-width: 430px;
+            padding: 20px;
+        }
+
+        .login-card {
+            border: none;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+        }
+
+        .login-header {
+            background: #ffffff;
+            text-align: center;
+            padding: 35px 30px 20px;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 18px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #0d6efd, #084298);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 30px;
+            box-shadow: 0 8px 20px rgba(13, 110, 253, 0.30);
+        }
+
+        .login-header h3 {
+            margin-bottom: 7px;
+            font-weight: 700;
+            color: #212529;
+        }
+
+        .login-header p {
+            margin: 0;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .login-body {
+            background: #ffffff;
+            padding: 25px 35px 35px;
+        }
+
+        .form-floating {
+            margin-bottom: 18px;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            border: 1px solid #dee2e6;
+            height: 58px;
+            font-size: 15px;
+        }
+
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.12);
+        }
+
+        .form-floating label {
+            color: #6c757d;
+        }
+
+        .btn-login {
+            width: 100%;
+            height: 52px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 16px;
+            background: linear-gradient(135deg, #0d6efd, #084298);
+            transition: all 0.2s ease;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 18px rgba(13, 110, 253, 0.30);
+        }
+
+        .login-footer {
+            text-align: center;
+            padding: 18px;
+            background: #f8f9fa;
+            color: #6c757d;
+            font-size: 13px;
+        }
+
+        .login-footer strong {
+            color: #495057;
+        }
+
+        .alert {
+            border-radius: 10px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 576px) {
+            .login-wrapper {
+                padding: 15px;
+            }
+
+            .login-body {
+                padding: 25px 22px 30px;
+            }
+
+            .login-header {
+                padding: 30px 20px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="layoutAuthentication">
+
+        <div id="layoutAuthentication_content">
+            <main class="login-wrapper">
+
+                <div class="card login-card">
+
+                    <!-- Encabezado -->
+                    <div class="login-header">
+
+                        <div class="logo">
+                            <i class="fas fa-store"></i>
+                        </div>
+
+                        <h3>Acceso al sistema</h3>
+
+                        <p>
+                            Sistema de gestión de ventas
+                        </p>
+
+                    </div>
+
+                    <!-- Formulario -->
+                    <div class="login-body">
+
+                        @if ($errors->any())
+                            @foreach ($errors->all() as $item)
+
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <i class="fas fa-circle-exclamation me-2"></i>
+                                    {{ $item }}
+
+                                    <button type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="alert"
+                                        aria-label="Cerrar">
+                                    </button>
+                                </div>
+
+                            @endforeach
+                        @endif
+
+                        <form action="{{ route('login.login') }}" method="POST">
+                            @csrf
+
+                            <!-- Correo -->
+                            <div class="form-floating">
+                                <input
+                                    autofocus
+                                    autocomplete="off"
+                                    class="form-control"
+                                    name="email"
+                                    id="inputEmail"
+                                    type="email"
+                                    value="invitado@gmail.com"
+                                    placeholder="correo@ejemplo.com"
+                                    required
+                                >
+
+                                <label for="inputEmail">
+                                    <i class="fas fa-envelope me-2"></i>
+                                    Correo electrónico
+                                </label>
+                            </div>
+
+                            <!-- Contraseña -->
+                            <div class="form-floating">
+                                <input
+                                    class="form-control"
+                                    name="password"
+                                    id="inputPassword"
+                                    type="password"
+                                    value="12345678"
+                                    placeholder="Contraseña"
+                                    required
+                                >
+
+                                <label for="inputPassword">
+                                    <i class="fas fa-lock me-2"></i>
+                                    Contraseña
+                                </label>
+                            </div>
+
+                            <!-- Botón -->
+                            <div class="mt-4">
+
+                                <button
+                                    class="btn btn-primary btn-login"
+                                    type="submit">
+
+                                    <i class="fas fa-right-to-bracket me-2"></i>
+                                    Iniciar sesión
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <!-- Pie -->
+                    <div class="login-footer">
+                        <strong>Sistema de Ventas</strong>
+                        <br>
+                        © {{ date('Y') }} Todos los derechos reservados.
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
+
