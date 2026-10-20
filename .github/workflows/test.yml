@@ -1,3 +1,4 @@
+
 name: Run PHP Test
 
 on:
@@ -11,17 +12,29 @@ jobs:
 
     steps:
     - name: Checkout del repositorio
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Configurar entorno PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2.6'
+        php-version: '8.2'
         extensions: mbstring, xml
         coverage: none
 
-    - name: Instalar Dependencias
-      run: composer install --prefer-dist --no-scripts --no-progress --no-suggest
+    - name: Configurar Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Instalar dependencias de Node.js
+      run: npm ci
+
+    - name: Compilar recursos de Vite
+      run: npm run build
+
+    - name: Instalar dependencias de PHP
+      run: composer install --prefer-dist --no-progress --no-interaction
 
     - name: Copiar archivo .env.example a .env
       run: cp .env.example .env
@@ -32,5 +45,5 @@ jobs:
     - name: Verificar dependencias seguras
       run: composer require --dev roave/security-advisories:dev-latest --no-update
 
-    - name: Ejecutar Pruebas
+    - name: Ejecutar pruebas
       run: vendor/bin/phpunit --testsuite Feature
