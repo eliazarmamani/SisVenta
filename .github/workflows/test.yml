@@ -1,62 +1,36 @@
-
-name: Run PHP Tests
+name: Run PHP Test
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
-
-permissions:
-  contents: read
 
 jobs:
   test:
-    name: Pruebas de Laravel
     runs-on: ubuntu-latest
 
     steps:
-      - name: Descargar repositorio
-        uses: actions/checkout@v2
+    - name: Checkout del repositorio
+      uses: actions/checkout@v2
 
-      - name: Configurar PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2.6'
-          extensions: mbstring, xml, dom, sqlite3, pdo_sqlite
-          coverage: none
-          tools: composer:v2
+    - name: Configurar entorno PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2.6'
+        extensions: mbstring, xml
+        coverage: none
 
-      - name: Guardar caché de Composer
-        uses: actions/cache@v4
-        with:
-          path: vendor
-          key: composer-${{ runner.os }}-${{ hashFiles('composer.lock') }}
-          restore-keys: |
-            composer-${{ runner.os }}-
+    - name: Instalar Dependencias
+      run: composer install --prefer-dist --no-scripts --no-progress --no-suggest
 
-      - name: Instalar dependencias PHP
-        run: composer install --prefer-dist --no-interaction --no-progress
+    - name: Copiar archivo .env.example a .env
+      run: cp .env.example .env
 
-      - name: Configurar archivo de entorno
-        run: cp .env.example .env
+    - name: Generar clave de aplicación
+      run: php artisan key:generate
 
-      - name: Generar clave de Laravel
-        run: php artisan key:generate
+    - name: Verificar dependencias seguras
+      run: composer require --dev roave/security-advisories:dev-latest --no-update
 
-      - name: Configurar Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: npm
-
-      - name: Instalar dependencias de Node
-        run: npm ci
-
-      - name: Compilar archivos de Vite
-        run: npm run build
-
-      - name: Ejecutar pruebas Feature
-        run: vendor/bin/phpunit --testsuite Feature
+    - name: Ejecutar Pruebas
+      run: vendor/bin/phpunit --testsuite Feature
