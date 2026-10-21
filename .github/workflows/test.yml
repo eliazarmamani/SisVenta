@@ -1,0 +1,42 @@
+name: Run PHP Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar entorno PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, xml, sqlite, pdo_sqlite
+          coverage: none
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependencias de Node.js
+        run: npm ci
+
+      - name: Compilar recursos de Vite
+        run: npm run build
+
+      - name: Instalar dependencias de PHP
+        run: composer install --prefer-dist --no-progress --no-interaction
+
+      - name: Copiar archivo .env.example a .env
+        run: cp .env.example .env
+
+      - name: Generar clave de aplicación
+        run: php artisan key:generate
