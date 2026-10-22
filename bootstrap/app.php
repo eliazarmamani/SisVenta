@@ -3,6 +3,9 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 use Spatie\Permission\Middleware\PermissionMiddleware;
 use Spatie\Permission\Middleware\RoleMiddleware;
@@ -42,6 +45,55 @@ return Application::configure(basePath: dirname(__DIR__))
 
     })
     ->withExceptions(function (Exceptions $exceptions): void {
-        //
+
+        // Error 404: página no encontrada.
+        $exceptions->render(function (
+            NotFoundHttpException $e,
+            Request $request
+        ) {
+            if ($request->expectsJson()) {
+                return null;
+            }
+
+            return response()->view('errors.404', [], 404);
+        });
+
+        // Errores HTTP 401 y 403.
+        $exceptions->render(function (
+            HttpException $e,
+            Request $request
+        ) {
+            if ($request->expectsJson()) {
+                return null;
+            }
+
+            $status = $e->getStatusCode();
+
+            if ($status === 401) {
+                return response()->view('errors.401', [], 401);
+            }
+
+            if ($status === 403) {
+                return response()->view('errors.403', [], 403);
+            }
+
+            return null;
+        });
+
+        // Error 500: página personalizada solo en producción.
+        $exceptions->render(function (
+            \Throwable $e,
+            Request $request
+        ) {
+            if (
+                ! app()->environment('production') ||
+                $request->expectsJson()
+            ) {
+                return null;
+            }
+
+            return response()->view('errors.500', [], 500);
+        });
+
     })
     ->create();

@@ -88,3 +88,6 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
 Route::get('/login', [loginController::class, 'index'])->name('login.index');
 Route::post('/login', [loginController::class, 'login'])->name('login.login');
 
+Route::get('/prueba-403', function () {
+    abort(403);
+});

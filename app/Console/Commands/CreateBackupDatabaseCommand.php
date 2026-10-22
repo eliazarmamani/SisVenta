@@ -39,7 +39,10 @@ class CreateBackupDatabaseCommand extends Command
             mkdir($backupPath, 0755, true);
         }
 
-        $command = "mysqldump --ignore-table={$database}.failed_jobs --ignore-table={$database}.migrations --no-create-info -u{$username} --password={$password} -h{$host} {$database} > {$filePath}";
+        
+        $mysqldump = 'C:/xampp/mysql/bin/mysqldump.exe';
+
+        $command = "\"{$mysqldump}\" --ignore-table={$database}.failed_jobs --ignore-table={$database}.migrations --no-create-info -u{$username} --password={$password} -h{$host} {$database} > \"{$filePath}\"";
 
         $result = Process::run($command);
 
